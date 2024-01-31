@@ -10,7 +10,7 @@ public class CalculatorParser
         this.expression = expression;
     }
 
-    public double calculate() {
+    public Double calculate() {
         char[] tokens = expression.toCharArray();
 
         Stack<Double> numbers = new Stack<>();
@@ -18,12 +18,15 @@ public class CalculatorParser
 
         Stack<Character> operators = new Stack<>();
 
-        for (int i = 0; i < tokens.length; i++) {
+        for (int i = 0; i < tokens.length; i++)
+        {
+
 
             if (Character.isDigit(tokens[i])) {
                 StringBuilder sb = new StringBuilder();
 
-                while (i < tokens.length && (Character.isDigit(tokens[i]) || tokens[i] == '.')) {
+                while (i < tokens.length && (Character.isDigit(tokens[i]) || tokens[i] == '.' ) ) {
+                    if (tokens[i] == '.' && !Character.isDigit(tokens[i+1])) throw new ArithmeticException();
                     sb.append(tokens[i++]);
                 }
 

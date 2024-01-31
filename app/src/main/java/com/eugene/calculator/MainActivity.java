@@ -14,8 +14,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private TextView result;
 
-    private CalculatorParser calculatorParser;
-
     private Button[] buttons;
     private final int[] buttonIds = {
             R.id.backscape, R.id.comma, R.id.zero, R.id.one, R.id.two, R.id.three, R.id.four, R.id.five, R.id.six,
@@ -74,7 +72,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         if (id == R.id.res)
         {
-            calculatorParser = new CalculatorParser(mathOperation.getText().toString());
+            CalculatorParser calculatorParser = new CalculatorParser(mathOperation.getText().toString());
             try{
                 Double num = calculatorParser.calculate();
                 result.setText(String.valueOf(num));
