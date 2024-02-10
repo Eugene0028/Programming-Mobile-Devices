@@ -36,21 +36,15 @@ public class CustomView extends View
         this.healthImages = healthImages;
     }
 
-
     public static Context context;
-
-
-
 
     public static final int screenWidth = 900;
     public static final int screenHeight = 1300;
 
 
 
-    Pair<Integer, Integer> spiderPair =  new Pair<>(R.drawable.spider1, R.drawable.spider2);
-    Pair<Integer, Integer> scorpPair =  new Pair<>(R.drawable.scorpion1, R.drawable.scorpion2);
 
-    Handler handler = new Handler();
+
 
     @SuppressLint("ClickableViewAccessibility")
     public CustomView(MainGame mainGame)
@@ -85,7 +79,7 @@ public class CustomView extends View
         Log.i(insect.getName(), "KILLED");
         insect.setTouched(true);
         Assets.playSquishSound();
-        handler.postDelayed(() ->
+        new Handler().postDelayed(() ->
         {
             insects.remove(insect);
             insect.interrupt();
@@ -121,6 +115,8 @@ public class CustomView extends View
 
     public void init()
     {
+        Pair<Integer, Integer> spiderPair =  new Pair<>(R.drawable.spider1, R.drawable.spider2);
+        Pair<Integer, Integer> scorpPair =  new Pair<>(R.drawable.scorpion1, R.drawable.scorpion2);
             for (int i = 0; i < 6; i++) {
             float x = (float) (Math.random() * screenWidth);
             float y = (float) (Math.random() * screenHeight);
