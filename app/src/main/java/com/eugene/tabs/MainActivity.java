@@ -35,19 +35,6 @@ public class MainActivity extends AppCompatActivity
         ViewPagerAdapter viewPagerAdapter = new ViewPagerAdapter(this, fragmentList);
         binding.viewPager.setAdapter(viewPagerAdapter);
 
-
-
-//        ListView listView = findViewById(R.id.my_list_view);
-//        List<String> arr = List.of("I", "LOVE", "JAVA");
-//
-//
-
-        //ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, arr);
-        //listView.setAdapter(arrayAdapter);
-
-        //listView.setOnItemClickListener((adapterView, view, i, l) -> Toast.makeText(MainActivity.this, "item selected " + arr.get(i), Toast.LENGTH_SHORT).show());
-
-
         new TabLayoutMediator(binding.tabLayout, binding.viewPager, (tab, pos) -> tab.setText(words.get(pos))).attach();
     }
 }
