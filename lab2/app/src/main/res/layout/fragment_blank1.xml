@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BlankFragment1"
+    android:background="@color/purple_700"
+    >
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <TextView
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="20px"
+
+        android:gravity="center|top"
+        android:padding="40pt"
+        android:text="Флат Евгений ИП-114"
+        android:fontFamily="@font/press_start_2p"
+        android:textColor="@color/orange"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:src="@drawable/myphoto" />
+
+</FrameLayout>

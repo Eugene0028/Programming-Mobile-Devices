@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<TableLayout
+        android:id="@+id/tableLayout"
+        android:stretchColumns="*"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BlankFragment1"
+    android:background="@color/purple_700"
+    >
+        <TableRow
+            android:id="@+id/table_row"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:ignore="UselessParent">
+
+            <TextView
+                android:id="@+id/programming_language"
+                android:layout_width="270sp"
+                android:layout_height="70sp"
+                android:layout_weight="3"
+                android:fontFamily="@font/press_start_2p"
+                android:gravity="center"
+                android:text="Programming language"
+                android:textColor="@color/orange"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="5"
+                android:padding="10dp" />
+            <TextView
+                android:fontFamily="@font/press_start_2p"
+                android:id="@+id/salary"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:text="Salary"
+                android:textColor="@color/orange"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+        </TableRow>
+</TableLayout>
