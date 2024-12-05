@@ -187,7 +187,7 @@ class CandleFire(
     varying float v_Offset;
 
     void main() {
-        float waveHeightX = cos(a_Position.z * 1.0 + u_Time * 2.0) * 0.01; // Adjusted to create snake-like motion
+        float waveHeightX = cos(a_Position.z * 1.0 + u_Time * 2.0) * 0.35; // Adjusted to create snake-like motion
         float waveHeightZ = sin(a_Position.x * 1.0 + u_Time * 2.0) * 0.0; // Adjusted to create snake-like motion
         float waveHeightY = cos(u_Time * 2.0) * 0.0; // Add vertical wave for upward movement
 
